@@ -10,7 +10,7 @@ goterm.org(x)
 \item{x}{species name}
 }
 \value{
-Go objects from ensembl
+GO objects from ensembl
 }
 \description{
 Title

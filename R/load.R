@@ -52,6 +52,7 @@ SupportedOrganismv2 <- c("HOMO SAPIENS / HUMAN", "RATTUS NORVEGICUS / RAT", "MUS
 #all_cc_leaf_nodes <- load("/home/facihul/Desktop/GO PROJECT/edgecc.RData")
 
 
+### This was the version of the save data prior to GOxploreR version 1.2.0
 #usethis::use_data(EdgeBP,EdgeMF,EdgeCC, biological_f_edgelist, molecular_f_edgelist, cellular_f_edgelist, BP, MF, CC,
 #                BPTair, CCTair, MFTair, BPElegan, CCElegan, MFElegan,
 #                 BPDrosophila, CCDrosophila, MFDrosophila, BPHuman, CCHuman, MFHuman, BPMouse, CCMouse, MFMouse,
@@ -63,12 +64,22 @@ SupportedOrganismv2 <- c("HOMO SAPIENS / HUMAN", "RATTUS NORVEGICUS / RAT", "MUS
 
 #usethis::use_data(g.GO_DAG.BP, g.GO_DAG.MF, g.GO_DAG.CC,internal = TRUE)
 
+### package internal data for GOxploreR version 1.2.0
+#usethis::use_data(biological_f_edgelist, molecular_f_edgelist, cellular_f_edgelist, BP, MF,
+#                  BPTair, CCTair, MFTair, BPElegan, CCElegan, MFElegan,
+#                 BPDrosophila, CCDrosophila, MFDrosophila, BPHuman, CCHuman, MFHuman , BPPombe,
+#                  CCPombe, MFPombe, BPYeast, CCYeast, MFYeast, BPZebrafish, CCZebrafish, MFZebrafish,
+#                  GOgeneralbp, GOgeneralmf, GOgeneralcc,AthalianAll,DrosophilaAll, EleganAll,
+#                  HumanAll,PombeAll,YeastAll,ZebrafishAll, Athalian, Drosophila, Elegan,
+#                  Human, Pombe, Yeast, Zebrafish, BPEcoli, CCEcoli, MFEcoli, EcoliAll, Ecoli,
+#                  internal = TRUE, overwrite = TRUE)
+
 ############################## organism supported ##############################
 #' Title
 #'
 #' @param x species name
 #' @keywords internal
-#' @return Go objects from ensembl
+#' @return GO objects from ensembl
 
 goterm.org <- function(x){
   if(toupper(x) == "HOMO SAPIENS" || toupper(x) == "HUMAN"){

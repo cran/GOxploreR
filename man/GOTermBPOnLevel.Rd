@@ -21,9 +21,9 @@ The Gene Ontology (GO) biological process (BP) tree was built using the root nod
 }
 \examples{
 # A vector of biological process GO terms
-goterms <- c("GO:0006805","GO:0009083","GO:0006631","GO:0006629")
+goterms <- c("GO:0006805","GO:0009083","GO:0006631")
 
 GOTermBPOnLevel(goterms)
 
-GOTermBPOnLevel("GO:0055114")
+GOTermBPOnLevel("GO:0006629")
 }

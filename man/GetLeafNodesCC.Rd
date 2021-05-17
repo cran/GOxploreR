@@ -25,7 +25,7 @@ Returns all the leaf nodes from a particular organism-specific GO-DAG. If empty 
  GetLeafNodesCC("Danio rerio")
 
 # Mouse CC GO-DAG leaf nodes
-GetLeafNodesCC("Mouse")
+GetLeafNodesCC("Zebrafish")
 
 }
 }

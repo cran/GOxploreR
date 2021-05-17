@@ -44,7 +44,8 @@ GO4Organism <- function(organism, domain = "BP"){
     return(MF)
   }
   else if(toupper(species) == "CC"){
-    return(CC)
+    #return(CC)
+    return(GOTermCCOnLevel(names(as.list(go2h2))))
   }
 
   else if(toupper(species) == "HOMO SAPIENS" || toupper(species) == "HUMAN"){

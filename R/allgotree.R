@@ -43,13 +43,13 @@ GetDAG <- function(organism, domain = "BP"){
   }
 
   if(toupper(Organism) == "BP"){
-    return(as.matrix(biological_f_edgelist[,c(2,1)]))
+    return(as.matrix(biological_f_edgelist))
   }
   else if(toupper(Organism) == "MF"){
-    return(as.matrix(molecular_f_edgelist[,c(2,1)]))
+    return(as.matrix(molecular_f_edgelist))
   }
   else if(toupper(Organism) == "CC"){
-    return(as.matrix(cellular_f_edgelist[,c(2,1)]))
+    return(as.matrix(cellular_f_edgelist))
   }
   else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     goids <- Human
@@ -124,7 +124,7 @@ GetDAG <- function(organism, domain = "BP"){
 #' GetLeafNodesBP(organism = "Human")
 #'
 #' # Mouse BP GO-DAG leaf nodes
-#' GetLeafNodesBP(organism = "Mouse")
+#' GetLeafNodesBP(organism = "DANIO RERIO")
 #'}
 GetLeafNodesBP <- function(organism = NULL){
   Organism <- organism
@@ -138,7 +138,14 @@ GetLeafNodesBP <- function(organism = NULL){
   }
 
   if(is.null(Organism) || toupper(Organism) == "BP" ){
-    return(EdgeBP)
+    #return(EdgeBP)
+    nonLeafNode <- GOgeneralbp$df[,3]
+    l <- lapply(nonLeafNode, function(i){
+      if(i != 0){
+        return(GOgeneralbp$v[[as.character(i)]])
+      }
+    })
+    return(GOTermBPOnLevel(unlist(l)))
 
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- BPHuman$df[,3]
@@ -252,7 +259,7 @@ GetLeafNodesBP <- function(organism = NULL){
 #' @examples
 #' \donttest{
 #' # Mouse MF GO-DAG leaf nodes
-#' GetLeafNodesMF(organism = "Mus musculus")
+#' GetLeafNodesMF(organism = "HOMO SAPIENS")
 #'
 #' # Arabidopsis thaliana MF GO-DAG leaf nodes
 #' GetLeafNodesMF(organism = "Arabidopsis thaliana")
@@ -274,7 +281,15 @@ GetLeafNodesMF <- function(organism = NULL){
   }
 
   if(is.null(Organism) || toupper(Organism) == "MF" ){
-    return(EdgeMF)
+    #return(EdgeMF)
+    nonLeafNode <- GOgeneralmf$df[,3]
+    l <- lapply(nonLeafNode, function(i){
+      if(i != 0){
+        return(GOgeneralmf$v[[as.character(i)]])
+      }
+    })
+    return(GOTermMFOnLevel(unlist(l)))
+
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- MFHuman$df[,3]
     l <- lapply(nonLeafNode, function(i){
@@ -392,7 +407,7 @@ GetLeafNodesMF <- function(organism = NULL){
 #'  GetLeafNodesCC("Danio rerio")
 #'
 #' # Mouse CC GO-DAG leaf nodes
-#' GetLeafNodesCC("Mouse")
+#' GetLeafNodesCC("Zebrafish")
 #'
 #' }
 
@@ -409,7 +424,16 @@ GetLeafNodesCC <- function(organism = NULL){
   }
 
   if(is.null(Organism) || toupper(Organism) == "CC" ){
-    return(EdgeCC)
+    #return(EdgeCC)
+
+    nonLeafNode <- GOgeneralcc$df[,3]
+    l <- lapply(nonLeafNode, function(i){
+      if(i != 0){
+        return(GOgeneralcc$v[[as.character(i)]])
+      }
+    })
+    return(GOTermCCOnLevel(unlist(l)))
+
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- CCHuman$df[,3]
     l <- lapply(nonLeafNode, function(i){

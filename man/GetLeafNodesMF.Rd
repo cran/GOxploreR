@@ -22,7 +22,7 @@ Returns all the leaf nodes from a particular organism-specific GO-DAG. If empty 
 \examples{
 \donttest{
 # Mouse MF GO-DAG leaf nodes
-GetLeafNodesMF(organism = "Mus musculus")
+GetLeafNodesMF(organism = "HOMO SAPIENS")
 
 # Arabidopsis thaliana MF GO-DAG leaf nodes
 GetLeafNodesMF(organism = "Arabidopsis thaliana")

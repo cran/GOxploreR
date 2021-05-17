@@ -24,7 +24,6 @@
 #' GOTermMFOnLevel("GO:0005542")
 #'
 
-
 GOTermMFOnLevel <- function(goterm){
   if(is.numeric(goterm)){
     stop("The \"goterm\" argument should be a GO-term(s)")
@@ -36,22 +35,28 @@ GOTermMFOnLevel <- function(goterm){
   isna <- which(is.na(ont))
   nonretired <- which(Ontology(x) != "MF")
   if(length(isna) > 0 && length(nonretired) > 0){
-    index <- sort(c(nonretired,isna))
-    stop(paste(c("Check that the term on index",index,"are mf GO-terms and not obsolete"), collapse = " "))
+    index <- c(nonretired,isna)
+    warning(paste(c("Check that the term on index",x[index],"are mf GO-terms and not obsolete"), collapse = " "))
+    x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
-    stop(paste(c("Check that the term on index", isna,"are mf GO-terms and not obsolete"), collapse = " "))
+    stop(paste(c("Check that the term on index", x[isna],"are mf GO-terms and not obsolete"), collapse = " "))
+    x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term on index", nonretired,"are mf GO-terms and not obsolete"), collapse = " "))
+    stop(paste(c("Check that the term on index", x[nonretired],"are mf GO-terms and not obsolete"), collapse = " "))
+    x <- x[-nonretired]
   }
 
-  dat <- data.frame()
-  for(i in 1:length(x)){
-    dat[i,1] <- x[i]
-    dat[i,2] <- go2h1[[x[i]]][length(go2h1[[x[i]]])] - 1
+  if(length(x) > 0){
+    dat <- data.frame()
+    for(i in 1:length(x)){
+      dat[i,1] <- x[i]
+      dat[i,2] <- go2h1[[x[i]]][length(go2h1[[x[i]]])] - 1
+    }
+    colnames(dat) = c("Term", "Level")
+    return(dat)
   }
-  colnames(dat) = c("Term", "Level")
-  return(dat)
+
 
 
 }

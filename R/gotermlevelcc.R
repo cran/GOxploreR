@@ -35,23 +35,27 @@ GOTermCCOnLevel <- function(goterm){
   isna <- which(is.na(ont))
   nonretired <- which(Ontology(x) != "CC")
   if(length(isna) > 0 && length(nonretired) > 0){
-    index <- sort(c(nonretired,isna))
-    stop(paste(c("Check that the term on index",index,"are cc GO-terms and not obsolete"), collapse = " "))
+    index <- c(nonretired,isna)
+    warning(paste(c("Check that the term on index",x[index],"are cc GO-terms and not obsolete"), collapse = " "))
+    x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
-    stop(paste(c("Check that the term on index", isna,"are cc GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term on index",x[isna],"are cc GO-terms and not obsolete"), collapse = " "))
+    x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term on index", nonretired,"are cc GO-terms and not obsolete"), collapse = " "))
+    stop(paste(c("Check that the term on index", x[nonretired],"are cc GO-terms and not obsolete"), collapse = " "))
+    x <- x[-nonretired]
   }
 
-  dat <- data.frame()
-  for(i in 1:length(x)){
-    dat[i,1] <- x[i]
-    dat[i,2] <- go2h2[[x[i]]][length(go2h2[[x[i]]])] - 1
+  if(length(x) > 0){
+    dat <- data.frame()
+    for(i in 1:length(x)){
+      dat[i,1] <- x[i]
+      dat[i,2] <- go2h2[[x[i]]][length(go2h2[[x[i]]])] - 1
+    }
+    colnames(dat) = c("Term", "Level")
+    return(dat)
   }
-  colnames(dat) = c("Term", "Level")
-  return(dat)
-
 }
 
 

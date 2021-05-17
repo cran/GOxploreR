@@ -28,6 +28,6 @@ GetLeafNodesBP("BP")
 GetLeafNodesBP(organism = "Human")
 
 # Mouse BP GO-DAG leaf nodes
-GetLeafNodesBP(organism = "Mouse")
+GetLeafNodesBP(organism = "DANIO RERIO")
 }
 }
