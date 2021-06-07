@@ -9,7 +9,7 @@
 #' @param org       Organism
 #' @return A graph of the simplified GO tree
 #' @keywords internal
-#' @importFrom network %v%<-
+#' @importFrom network %v%<- as.network
 #'
 #' @importFrom ggnetwork ggnetwork geom_edges geom_nodes geom_nodetext
 #' @importFrom dplyr distinct %>% rename mutate arrange id
@@ -63,9 +63,10 @@ drawGraph <- function(Elegans, nodeinfo, title, species, ont, org){
     arrange(id)
 
   nodes
+  edges <- as.matrix(edges)
 
   # Network
-  n <- network::network(edges, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+  n <- network::network(as.network(edges), vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
 
   tags <- c()
   for (i in 1:network::network.size(n)) {

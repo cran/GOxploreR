@@ -1,5 +1,5 @@
-2749b9c7ee5a7111b7baa2f81df994c8 *DESCRIPTION
-f3e0117b6120f8fd548259805aafe41f *NAMESPACE
+9b15d004f7c22003f796687feaa2b132 *DESCRIPTION
+a22438379d5dd6165697545ae77a3e6e *NAMESPACE
 3f85158f95288bdc5fe123f996df852c *R/GO4org.R
 830ae9c20d6a65655f2205e15886af9d *R/GeneGotermAndLevel.R
 5a0d9e4bf8953ba75316064d84852385 *R/GeneGotermAndLevelOL.R
@@ -11,8 +11,8 @@ e905a7a3f8d4506c68ab295e1ffbcc7b *R/buildGoTree.R
 68e13b989c6ebc7f40826db2b3801a6e *R/degreeDistBP.R
 b9f477cb60377e1ad0da2b3307f4658e *R/degreeDistCC.R
 981a69f4763e6299b77cbd2cac737682 *R/degreeDistMF.R
-35bb239d333fa0dce70e8de65fd9fcdf *R/drawGraph.R
-50620b79dd434da2176d5afd7e78653d *R/drawGraph4vis.R
+90589d3c71cfebebcbf85daa6e501704 *R/drawGraph.R
+67be7cf431cbb958e2da5580fdbc0393 *R/drawGraph4vis.R
 eb12ce9230ba8d7c1b9bd5b9460b44fe *R/edgeListBp.R
 0e3b0bf262fdaf2a8196562eb855a6e0 *R/edgeListCc.R
 abcae2796302565ac7bfe7dc088df7ce *R/edgeListMf.R
@@ -28,7 +28,7 @@ fbc6c185d199abf8fe479f21296d0bdf *R/visdag.R
 3f46940db916dd9dcc5bfc98ee533e71 *build/vignette.rds
 1e5dabc8c59f21d4c50fb3ab0a647bfb *inst/doc/GOxploreR.R
 74c53f7ef51b065dd2e3eaacfc5f8f95 *inst/doc/GOxploreR.Rmd
-2fc21891da6e043abd2e82c61703db4f *inst/doc/GOxploreR.pdf
+243647da91259bb80829e3a78b48e26d *inst/doc/GOxploreR.pdf
 522638bd8f64606b8a4beb60cf81d0c9 *man/GO2DecBP.Rd
 f14fa1e53547147bd4d12a4e7f6fd5e7 *man/GO2DecCC.Rd
 64222a37f5bbf9628c1ee4197f565f0e *man/GO2DecMF.Rd

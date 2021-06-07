@@ -11,7 +11,7 @@
 #'
 #' @return A graph of the simplified GO tree
 #' @keywords internal
-#' @importFrom network network network.size %v%<-
+#' @importFrom network network network.size %v%<- as.network
 #' @importFrom ggnetwork ggnetwork geom_edges geom_nodes geom_nodetext
 #' @importFrom ggplot2 ggplot scale_fill_manual theme scale_alpha geom_hline scale_color_discrete scale_x_discrete scale_y_continuous guides annotate aes arrow unit  element_blank element_text rel labs element_line
 #' @importFrom dplyr distinct %>% rename mutate arrange id
@@ -29,7 +29,7 @@ drawGraph4Vis <- function(Elegans, nodeinfo, title, species, ont, val, org){
     y <- xx.ch2
     jump <- 0.02
   }
-
+#drawGraph4Vis(GOgeneralbp$dat.d, GOgeneralbp$df, "Biological process", GOgeneralbp$v ,"BP",saveTerm, Organism)
 
   # Preprocess data
   title <- title
@@ -76,10 +76,11 @@ drawGraph4Vis <- function(Elegans, nodeinfo, title, species, ont, val, org){
     valEdges <- c(valEdges, v)
   }
   edges <- edges[valEdges,]
+  edges <- as.matrix(edges)
 
 
   # Network
-  n <- network(edges, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+  n <- network(as.network(edges), vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
 
   tags <- c()
   for (i in 1:network.size(n)) {
