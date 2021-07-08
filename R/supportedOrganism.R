@@ -67,7 +67,7 @@ visRDAGBP <- function(organism, plot = TRUE){
       return(BPHuman$v[[as.character(x)]])
     })
     p <- drawGraph(BPHuman$dat.d, BPHuman$df, "Biological process", BPHuman$v ,"BP", organism)
-    goterm <- getNodeTerms(BPHuman$df, BPHuman$v )
+    goterm <- getNodeTerms(BPHuman$df, BPHuman$v)
     if(plot){
       output <- list("terms" = as.list(goterm), "plot" = p)
       return(output)

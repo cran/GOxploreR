@@ -192,7 +192,7 @@ Level2GOTermBP(level = 1, organism = "Human")
 Level2GOTermMF(level = 14, organism = "Rat")
 
 # Retrieve all the GO-terms from the general GO CC level
-Level2GOTermCC(level = 16)
+Level2GOTermCC(level = 14)
 
 ```
 
@@ -205,10 +205,10 @@ This function gives all the leaf nodes from a particular GO-level. Leaf nodes ca
 Level2LeafNodeBP(level = 2, organism = "Danio rerio")
 
 # Get all leaf nodes from a GO MF level 
-Level2LeafNodeMF(level = 13)
+Level2LeafNodeMF(level = 12)
 
 # Get all leaf nodes from a GO CC level 
-Level2LeafNodeCC(level = 15, organism = "Schizosaccharomyces pombe")
+Level2LeafNodeCC(level = 10, organism = "Schizosaccharomyces pombe")
 ```
 
 ### Level2JumpNodeXX
@@ -248,7 +248,7 @@ This function gives all the GO-terms from a GO-level that are not leaf nodes. Si
 Level2NoLeafNodeBP(level = 16, organism = "Homo sapiens")
 
 # All GO-terms on a particular GO MF level that are not leaf nodes 
-Level2NoLeafNodeMF(level = 11, organism = "Caenorhabditis elegans")
+Level2NoLeafNodeMF(level = 10, organism = "Caenorhabditis elegans")
 
 # All GO-terms on a particular GO CC level that are not leaf nodes 
 Level2NoLeafNodeCC(level = 12, organism = "Homo sapiens")
@@ -321,7 +321,7 @@ This function returns all descedant child nodes of a GO-term. That means, we beg
 # Biological process GO-term descendant terms
 GO2DecBP(goterm = "GO:0044582")
 # Molecular function GO-term descendant terms
-GO2DecMF(goterm = "GO:0036442")
+GO2DecMF(goterm = "GO:0008553")
 # Cellular component GO-term descendant terms
 GO2DecCC(goterm = "GO:0031233")
 ```
@@ -347,8 +347,7 @@ head(GetDAG(organism = "Caenorhabditis elegans", domain = "CC"))
 
 The visualization of a GO-DAG is difficult primarily because of the size of the graphs containing thousands of GO-terms. For this reason, we invented a simple method that combines GO-terms with similar characteristics together. This includes a global summary of all GO-terms in the DAG. Every node in the reduced DAG comprises 1 or more GO-terms and these GO-terms can be accessed by using certain information (i.e. the level and what type of node category they represent for example "RN", "JN" or "LN"). This is what we call the reduced GO-DAG for an organism. Furthermore, the function returns a list which contains the GO-terms in each category and the plot of the reduced DAG. To retrieve just the GO-terms in each category, the "plot" argument can be set to "FALSE" . The XX in the name should be substituted with BP, MF or CC. The total number of GO-terms in each node is represented by the node label. For instance, in Figure \ref{fig:figs1} , Level 0 (i.e "L0 RN") has 1 GO-term present in the node category. 
 
-The label "J","R" and "L" on the right side of Figure \ref{fig:figs1}  gives the number of connections between the regular node (RN) on the level and the nodes right below it (RN are nodes that have all their children nodes represented in the next level). For example, on L1, The label J = 5, R = 9 and L = 6 means that the RNs on the level have 5 of it's children nodes as Jump nodes (JN) on L2, 9 of it's descendant are Regular nodes (RN) and 6 of its children GO-terms on L2 are leaf nodes (LN). 
-
+The label "J","R" and "L" on the right side of Figure \ref{fig:figs1} gives the number of connections between the regular node (RN) on the level and the nodes right below it (RN are nodes that have all their children nodes represented in the next level). For example, on L1, The label J = 5, R = 9 and L = 6 means that the RNs on the level have 5 of it's children nodes as Jump nodes (JN) on L2, 9 of it's descendant are Regular nodes (RN) and 6 of its children GO-terms on L2 are leaf nodes (LN). 
 
 
 
@@ -363,7 +362,7 @@ visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L1 RN"
 visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L9 JN"
 
 # LN GO-terms on level 14 can be access as follows
-visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L14 LN"
+visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L11 LN"
 ```
 
 ```{r, message=FALSE, fig.cap="\\label{fig:figs1}Visualization of a reduced GO-DAG for Caenorhabditis elegans."}

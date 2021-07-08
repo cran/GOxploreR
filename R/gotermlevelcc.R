@@ -97,8 +97,8 @@ Level2GOTermCC <- function(level, organism = NULL){
     stop("The \"organism\" argument should be given from the list above")
   }
   if(is.null(Organism)){
-    if(x > 18){
-      stop(paste("No such level exist for the general GO cc tree, the highest level is", 17 , sep = " "))
+    if(x > 15){
+      stop(paste("No such level exist for the general GO cc tree, the highest level is", 14 , sep = " "))
     }
 
     l <- lapply(names(go2h2), function(y){

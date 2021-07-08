@@ -39,7 +39,7 @@ Level2GOTermBP(level = 1, organism = "Human")
 Level2GOTermMF(level = 14, organism = "Rat")
 
 # Retrieve all the GO-terms from the general GO CC level
-Level2GOTermCC(level = 16)
+Level2GOTermCC(level = 14)
 
 
 ## -----------------------------------------------------------------------------
@@ -47,10 +47,10 @@ Level2GOTermCC(level = 16)
 Level2LeafNodeBP(level = 2, organism = "Danio rerio")
 
 # Get all leaf nodes from a GO MF level 
-Level2LeafNodeMF(level = 13)
+Level2LeafNodeMF(level = 12)
 
 # Get all leaf nodes from a GO CC level 
-Level2LeafNodeCC(level = 15, organism = "Schizosaccharomyces pombe")
+Level2LeafNodeCC(level = 10, organism = "Schizosaccharomyces pombe")
 
 ## -----------------------------------------------------------------------------
 # All jump nodes from the GO BP level
@@ -73,7 +73,7 @@ head(Level2RegularNodeCC(level = 7))
 Level2NoLeafNodeBP(level = 16, organism = "Homo sapiens")
 
 # All GO-terms on a particular GO MF level that are not leaf nodes 
-Level2NoLeafNodeMF(level = 11, organism = "Caenorhabditis elegans")
+Level2NoLeafNodeMF(level = 10, organism = "Caenorhabditis elegans")
 
 # All GO-terms on a particular GO CC level that are not leaf nodes 
 Level2NoLeafNodeCC(level = 12, organism = "Homo sapiens")
@@ -113,7 +113,7 @@ GOTermCC2ChildLevel(goterm = "GO:0071735")
 # Biological process GO-term descendant terms
 GO2DecBP(goterm = "GO:0044582")
 # Molecular function GO-term descendant terms
-GO2DecMF(goterm = "GO:0036442")
+GO2DecMF(goterm = "GO:0008553")
 # Cellular component GO-term descendant terms
 GO2DecCC(goterm = "GO:0031233")
 
@@ -138,7 +138,7 @@ visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L1 RN"
 visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L9 JN"
 
 # LN GO-terms on level 14 can be access as follows
-visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L14 LN"
+visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L11 LN"
 
 ## ---- message=FALSE, fig.cap="\\label{fig:figs1}Visualization of a reduced GO-DAG for Caenorhabditis elegans."----
 # Represent the molecular function GO-DAG for organism Caenorhabditis elegans
