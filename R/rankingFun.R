@@ -30,7 +30,6 @@
 #' distRankingGO(goterm = goterm, domain = "BP", plot = TRUE)
 #'
 distRankingGO <- function(goterm, domain = "BP", plot = TRUE){
-  #goterm <- goterm[-c(14,22,37)]
   z <- 0
   x <- goterm
   if(toupper(domain) == "BP"){
@@ -45,7 +44,7 @@ distRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     cc3 <- vector(mode="numeric", length=L)
     for(i in 1:L){
       goterms <- GO2DecBP(goterm = x[i])
-      if(!is.null(goterms)){
+      if(all(!is.na(goterms))){
         cc1[i] <- max(GOTermBPOnLevel(goterm = goterms)$Level)
       }else{
         cc1[i] <- GOTermBPOnLevel(goterm = x[i])$Level
@@ -87,7 +86,7 @@ distRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     cc3 <- vector(mode="numeric", length=L)
     for(i in 1:L){
       goterms <- GO2DecCC(goterm = x[i])
-      if(!is.null(goterms)){
+      if(all(!is.na(goterms))){
         cc1[i] <- max(GOTermCCOnLevel(goterm = goterms)$Level)
       }else{
         cc1[i] <- GOTermCCOnLevel(goterm = x[i])$Level
@@ -185,8 +184,8 @@ scoreRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     L <- length(x)
     cc1 <- vector(mode="numeric", length=L)
     for(i in 1:L){
-      goterms <- GO2DecBP(goterm = x[i])
-      if(!is.null(goterms)){
+      goterms <- `GO2DecBP`(goterm = x[i])
+      if(all(!is.na(goterms))){
         cc1[i] <- max(GOTermBPOnLevel(goterm = goterms)$Level)
       }else{
         cc1[i] <- GOTermBPOnLevel(goterm = x[i])$Level

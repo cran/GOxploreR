@@ -145,7 +145,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(GOgeneralbp$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- BPHuman$df[,3]
@@ -154,7 +159,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPHuman$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
 
   }else if(toupper(Organism) == "RATTUS NORVEGICUS" || toupper(Organism) == "RAT"){
@@ -164,7 +174,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(gontr::BPRat$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "MUS MUSCULUS" || toupper(Organism) == "MOUSE"){
     nonLeafNode <- gontr::BPMouse$df[,3]
@@ -173,7 +188,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(gontr::BPMouse$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "DANIO RERIO" || toupper(Organism) == "ZEBRAFISH"){
     nonLeafNode <- BPZebrafish$df[,3]
@@ -182,7 +202,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPZebrafish$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "CAENORHABDITIS ELEGANS" || toupper(Organism) == "WORM"){
     nonLeafNode <- BPElegan$df[,3]
@@ -191,7 +216,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPElegan$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "ARABIDOPSIS THALIANA" || toupper(Organism) == "CRESS"){
     nonLeafNode <- BPTair$df[,3]
@@ -200,7 +230,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPTair$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "SACCHAROMYCES CEREVISIAE" || toupper(Organism) == "YEAST"){
     nonLeafNode <- BPYeast$df[,3]
@@ -209,7 +244,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPYeast$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }else if(toupper(Organism) == "SCHIZOSACCHAROMYCES POMBE" || toupper(Organism) == "FISSION YEAST"){
     nonLeafNode <- BPPombe$df[,3]
@@ -218,7 +258,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPPombe$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
 
   }
   else if(toupper(Organism) == "DROSOPHILA MELANOGASTER" || toupper(Organism) == "FRUIT FLY"){
@@ -228,7 +273,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPDrosophila$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
   }
   else if(toupper(Organism) == "ESCHERICHIA COLI" || toupper(Organism) == "E.COLI"){
     nonLeafNode <- BPEcoli$df[,3]
@@ -237,7 +287,12 @@ GetLeafNodesBP <- function(organism = NULL){
         return(BPEcoli$v[[as.character(i)]])
       }
     })
-    return(GOTermBPOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermBPOnLevel(l))
   }
 
 }
@@ -259,7 +314,7 @@ GetLeafNodesBP <- function(organism = NULL){
 #' @examples
 #' \donttest{
 #' # Mouse MF GO-DAG leaf nodes
-#' GetLeafNodesMF(organism = "HOMO SAPIENS")
+#' GetLeafNodesMF(organism = "Human")
 #'
 #' # Arabidopsis thaliana MF GO-DAG leaf nodes
 #' GetLeafNodesMF(organism = "Arabidopsis thaliana")
@@ -281,14 +336,18 @@ GetLeafNodesMF <- function(organism = NULL){
   }
 
   if(is.null(Organism) || toupper(Organism) == "MF" ){
-    #return(EdgeMF)
     nonLeafNode <- GOgeneralmf$df[,3]
     l <- lapply(nonLeafNode, function(i){
       if(i != 0){
         return(GOgeneralmf$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- MFHuman$df[,3]
@@ -297,7 +356,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFHuman$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
 
   }else if(toupper(Organism) == "RATTUS NORVEGICUS" || toupper(Organism) == "RAT"){
@@ -307,7 +371,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(gontr::MFRat$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "MUS MUSCULUS" || toupper(Organism) == "MOUSE"){
     nonLeafNode <- gontr::MFMouse$df[,3]
@@ -316,7 +385,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(gontr::MFMouse$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "DANIO RERIO" || toupper(Organism) == "ZEBRAFISH"){
     nonLeafNode <- MFZebrafish$df[,3]
@@ -325,7 +399,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFZebrafish$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "CAENORHABDITIS ELEGANS" || toupper(Organism) == "WORM" ){
     nonLeafNode <- MFElegan$df[,3]
@@ -334,7 +413,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFElegan$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "ARABIDOPSIS THALIANA" || toupper(Organism) == "CRESS"){
     nonLeafNode <- MFTair$df[,3]
@@ -343,7 +427,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFTair$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "SACCHAROMYCES CEREVISIAE" || toupper(Organism) == "YEAST"){
     nonLeafNode <- MFYeast$df[,3]
@@ -352,7 +441,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFYeast$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "SCHIZOSACCHAROMYCES POMBE" || toupper(Organism) == "FISSION YEAST"){
     nonLeafNode <- MFPombe$df[,3]
@@ -361,7 +455,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFPombe$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }
   else if(toupper(Organism) == "DROSOPHILA MELANOGASTER" || toupper(Organism) == "FRUIT FLY"){
@@ -371,7 +470,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFDrosophila$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
 
   }else if(toupper(Organism) == "ESCHERICHIA COLI" || toupper(Organism) == "E.COLI"){
     nonLeafNode <- MFEcoli$df[,3]
@@ -380,7 +484,12 @@ GetLeafNodesMF <- function(organism = NULL){
         return(MFEcoli$v[[as.character(i)]])
       }
     })
-    return(GOTermMFOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermMFOnLevel(l))
   }
 
 }
@@ -432,7 +541,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(GOgeneralcc$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "HOMO SAPIENS" || toupper(Organism) == "HUMAN"){
     nonLeafNode <- CCHuman$df[,3]
@@ -441,7 +555,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCHuman$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
 
   }else if(toupper(Organism) == "RATTUS NORVEGICUS" || toupper(Organism) == "RAT"){
@@ -451,7 +570,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(gontr::CCRat$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "MUS MUSCULUS" || toupper(Organism) == "MOUSE"){
     nonLeafNode <- gontr::CCMouse$df[,3]
@@ -460,7 +584,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(gontr::CCMouse$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "DANIO RERIO" || toupper(Organism) == "ZEBRAFISH"){
     nonLeafNode <- CCZebrafish$df[,3]
@@ -469,7 +598,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCZebrafish$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "CAENORHABDITIS ELEGANS" || toupper(Organism) == "WORM"){
     nonLeafNode <- CCElegan$df[,3]
@@ -478,7 +612,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCElegan$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "ARABIDOPSIS THALIANA" || toupper(Organism) == "CRESS"){
     nonLeafNode <- CCTair$df[,3]
@@ -487,7 +626,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCTair$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "SACCHAROMYCES CEREVISIAE" || toupper(Organism) == "YEAST"){
     nonLeafNode <- CCYeast$df[,3]
@@ -496,7 +640,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCYeast$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "SCHIZOSACCHAROMYCES POMBE" || toupper(Organism) == "FISSION YEAST"){
     nonLeafNode <- CCPombe$df[,3]
@@ -505,7 +654,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCPombe$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "DROSOPHILA MELANOGASTER" || toupper(Organism) == "FRUIT FLY"){
     nonLeafNode <- CCDrosophila$df[,3]
@@ -514,7 +668,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCDrosophila$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
 
   }else if(toupper(Organism) == "ESCHERICHIA COLI" || toupper(Organism) == "E.COLI"){
     nonLeafNode <- CCEcoli$df[,3]
@@ -523,7 +682,12 @@ GetLeafNodesCC <- function(organism = NULL){
         return(CCEcoli$v[[as.character(i)]])
       }
     })
-    return(GOTermCCOnLevel(unlist(l)))
+    l.val <- Ontology(unlist(l)); l <- unlist(l)
+    a <- which(is.na(l.val))
+    if(length(a) > 0){
+      l <- l[-a]
+    }
+    return(GOTermCCOnLevel(l))
   }
 }
 

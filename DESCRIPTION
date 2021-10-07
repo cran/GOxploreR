@@ -1,7 +1,7 @@
 Package: GOxploreR
 Type: Package
 Title: Structural Exploration of the Gene Ontology (GO) Knowledge Base
-Version: 1.2.2
+Version: 1.2.3
 Author: Kalifa Manjang, Frank Emmert-Streib, Shailesh Tripathi, Olli Yli-Harja, Matthias Dehmer
 Maintainer: Kalifa Manjang <kalifamanjang1@gmail.com>
 Description: It provides an effective, efficient, and fast way to explore the Gene Ontology (GO). 
@@ -11,12 +11,12 @@ Description: It provides an effective, efficient, and fast way to explore the Ge
              the following article <doi:10.1038/s41598-020-73326-3>.
 License: GPL-2
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Imports: igraph, network, dplyr, biomaRt, annotate, graphics, ggplot2
 Depends: R (>= 2.10), GO.db, gontr, ggraph
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-07-08 15:07:43 UTC; kalifa
+Packaged: 2021-10-07 14:15:49 UTC; kalifa
 Repository: CRAN
-Date/Publication: 2021-07-08 15:50:07 UTC
+Date/Publication: 2021-10-07 15:40:02 UTC
