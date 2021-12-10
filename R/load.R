@@ -65,14 +65,14 @@ SupportedOrganismv2 <- c("HOMO SAPIENS / HUMAN", "RATTUS NORVEGICUS / RAT", "MUS
 #usethis::use_data(g.GO_DAG.BP, g.GO_DAG.MF, g.GO_DAG.CC,internal = TRUE)
 
 ### package internal data for GOxploreR version 1.2.0
-#usethis::use_data(biological_f_edgelist, molecular_f_edgelist, cellular_f_edgelist, BP, MF,
+# usethis::use_data(biological_f_edgelist, molecular_f_edgelist, cellular_f_edgelist, BP, MF,CC,
 #                  BPTair, CCTair, MFTair, BPElegan, CCElegan, MFElegan,
-#                 BPDrosophila, CCDrosophila, MFDrosophila, BPHuman, CCHuman, MFHuman , BPPombe,
-#                  CCPombe, MFPombe, BPYeast, CCYeast, MFYeast, BPZebrafish, CCZebrafish, MFZebrafish,
-#                  GOgeneralbp, GOgeneralmf, GOgeneralcc,AthalianAll,DrosophilaAll, EleganAll,
-#                  HumanAll,PombeAll,YeastAll,ZebrafishAll, Athalian, Drosophila, Elegan,
-#                  Human, Pombe, Yeast, Zebrafish, BPEcoli, CCEcoli, MFEcoli, EcoliAll, Ecoli,
-#                  internal = TRUE, overwrite = TRUE)
+#                  BPDrosophila, CCDrosophila, MFDrosophila, BPHuman, CCHuman, MFHuman , BPPombe,
+#                   CCPombe, MFPombe, BPYeast, CCYeast, MFYeast, BPZebrafish, CCZebrafish, MFZebrafish,
+#                   GOgeneralbp, GOgeneralmf, GOgeneralcc,AthalianAll,DrosophilaAll, EleganAll,
+#                   HumanAll,PombeAll,YeastAll,ZebrafishAll, Athalian, Drosophila, Elegan,
+#                   Human, Pombe, Yeast, Zebrafish, BPEcoli, CCEcoli, MFEcoli, EcoliAll, Ecoli,
+#                   internal = TRUE, overwrite = TRUE)
 
 ############################## organism supported ##############################
 #' Title

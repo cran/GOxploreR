@@ -1,4 +1,4 @@
-d3c10bcde9d373fce017877a793bc9ef *DESCRIPTION
+0141df1444333eb377f8e5100f1e5e84 *DESCRIPTION
 9de255e2a37a223ad6af02c67e11de52 *NAMESPACE
 3f85158f95288bdc5fe123f996df852c *R/GO4org.R
 830ae9c20d6a65655f2205e15886af9d *R/GeneGotermAndLevel.R
@@ -7,7 +7,7 @@ e7bb4830beb6495e5ce7c0892a95efd8 *R/JumpNode.R
 9f62d36eb6286e5b5c33611736c5eefd *R/RegularNode.R
 32b44a1d35930763ce54e4656e68493b *R/allgotree.R
 caa105b26a7b1bfe012a6a8ab63cecda *R/allterms.R
-e905a7a3f8d4506c68ab295e1ffbcc7b *R/buildGoTree.R
+8a042cf7f61f518d3dc79341ad6a549b *R/buildGoTree.R
 68e13b989c6ebc7f40826db2b3801a6e *R/degreeDistBP.R
 b9f477cb60377e1ad0da2b3307f4658e *R/degreeDistCC.R
 981a69f4763e6299b77cbd2cac737682 *R/degreeDistMF.R
@@ -20,15 +20,15 @@ f0392e31bca0689db600ad7ae06213f9 *R/goedit.R
 ed858a887e7b3cc21ba3309cc1fa258d *R/gotermlevel.R
 9ed6f2549748699405971097e6e75849 *R/gotermlevelcc.R
 b3a4b8cf973ebf1d04d265d593f9a859 *R/gotermlevelmf.R
-c36c46275fb7d502953ab95482d3053d *R/load.R
+a439f90a26e75a5096e67c0063263beb *R/load.R
 aa9217b1fe9a66f8d561522bc130643c *R/rankingFun.R
 739b22149084571cd91cd1f934112281 *R/supportedOrganism.R
-26c449e9502268dc5c2d8ef1c9196d73 *R/sysdata.rda
+1f3fea3d30e1b13256c4d93867b67db6 *R/sysdata.rda
 fbc6c185d199abf8fe479f21296d0bdf *R/visdag.R
 c59a5d3a065af1134d2d19842b470452 *build/vignette.rds
 884187f55b614454a6ce3ad8b23eb251 *inst/doc/GOxploreR.R
 8d67d34ce2666f5464636c567cbdb8d0 *inst/doc/GOxploreR.Rmd
-11cebce2c8a480fdad8d90de07864d32 *inst/doc/GOxploreR.pdf
+7ef2c619ce038299dc82802c5d93a529 *inst/doc/GOxploreR.pdf
 522638bd8f64606b8a4beb60cf81d0c9 *man/GO2DecBP.Rd
 f14fa1e53547147bd4d12a4e7f6fd5e7 *man/GO2DecCC.Rd
 64222a37f5bbf9628c1ee4197f565f0e *man/GO2DecMF.Rd
