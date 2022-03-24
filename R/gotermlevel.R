@@ -32,12 +32,12 @@ GOTermBPOnLevel <- function(goterm){
   nonretired <- which(ont != "BP")
   if(length(isna) > 0 && length(nonretired) > 0){
     index <- c(nonretired,isna)
-    warning(paste(c("Check that the term on index",x[index],"are bp GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ",x[index],"are bp GO-terms and not obsolete"), collapse = " "))
     x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
     #x <- x[-isna]
-    warning(paste(c("Check that the term:", x[isna],"are bp GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[isna],"are bp GO-terms and not obsolete"), collapse = " "))
     x <- x[-isna]
   }else if(length(nonretired) > 0){
 

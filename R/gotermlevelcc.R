@@ -40,10 +40,10 @@ GOTermCCOnLevel <- function(goterm){
     x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
-    warning(paste(c("Check that the term on index",x[isna],"are cc GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term", x[isna],"are cc GO-terms and not obsolete"), collapse = " "))
     x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term on index", x[nonretired],"are cc GO-terms and not obsolete"), collapse = " "))
+    stop(paste(c("Check that the term ", x[nonretired],"are cc GO-terms and not obsolete"), collapse = " "))
     x <- x[-nonretired]
   }
 

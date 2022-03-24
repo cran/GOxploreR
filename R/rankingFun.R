@@ -184,8 +184,8 @@ scoreRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     L <- length(x)
     cc1 <- vector(mode="numeric", length=L)
     for(i in 1:L){
-      goterms <- `GO2DecBP`(goterm = x[i])
-      if(all(!is.na(goterms))){
+      goterms <- GO2DecBP(goterm = x[i])
+      if(all(!is.null(goterms)) && all(!is.na(goterms))){
         cc1[i] <- max(GOTermBPOnLevel(goterm = goterms)$Level)
       }else{
         cc1[i] <- GOTermBPOnLevel(goterm = x[i])$Level
@@ -204,7 +204,7 @@ scoreRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     cc1 <- vector(mode="numeric", length=L)
     for(i in 1:L){
       goterms <- as.vector(GO2DecMF(goterm = x[i]))
-      if(!is.null(goterms)){
+      if(all(!is.null(goterms)) && all(!is.na(goterms))){
         cc1[i] <- max(GOTermMFOnLevel(goterm = goterms)$Level)
       }
       else{
@@ -223,7 +223,7 @@ scoreRankingGO <- function(goterm, domain = "BP", plot = TRUE){
     cc1 <- vector(mode="numeric", length=L)
     for(i in 1:L){
       goterms <- GO2DecCC(goterm = x[i])
-      if(!is.null(goterms)){
+      if(all(!is.null(goterms)) && all(!is.na(goterms))){
         cc1[i] <- max(GOTermCCOnLevel(goterm = goterms)$Level)
       }else{
         cc1[i] <- GOTermCCOnLevel(goterm = x[i])$Level
