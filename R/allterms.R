@@ -67,8 +67,9 @@ getNodeTerms <- function(term, v){
 #' @export
 #'
 #' @examples
-#' goterm <- c("GO:0106003","GO:0044815","GO:1990415","GO:0002133","GO:1990415","GO:0089713",
+#' goterm <- c("GO:0106003","GO:0044815","GO:1990429","GO:0002133","GO:0089713",
 #' "GO:1990666","GO:0036125")
+#'
 #'
 #' getGOcategory(goterm)
 #'

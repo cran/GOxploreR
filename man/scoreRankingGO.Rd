@@ -15,7 +15,7 @@ scoreRankingGO(goterm, domain = "BP", plot = TRUE)
 }
 \value{
 The function returns the ordered GO-terms, the indices corresponding to these GO-terms, the score of each GO-term
-and a plot of the visualisaiton by default.
+and a plot of the visualization by default.
 }
 \description{
 scoreRankingGO provides ranking for a given list of GO-terms according to a score.
@@ -24,7 +24,7 @@ scoreRankingGO provides ranking for a given list of GO-terms according to a scor
 goterm <- c( "GO:0000278","GO:0006414","GO:0022403","GO:0006415",
 "GO:0045047","GO:0072599","GO:0006613","GO:0000184","GO:0070972",
 "GO:0006413","GO:0000087","GO:0000280","GO:0000279","GO:0006612",
-"GO:0000956","GO:0048285","GO:0019080","GO:0019083","GO:0043624",
+"GO:0000956","GO:0048285","GO:0019080","GO:0019083",
 "GO:0006402","GO:0032984","GO:0006401","GO:0072594","GO:0019058",
 "GO:0051301","GO:0016071","GO:0006412","GO:0002682","GO:0022411",
 "GO:0006614")
