@@ -67,7 +67,7 @@ getNodeTerms <- function(term, v){
 #' @export
 #'
 #' @examples
-#' goterm <- c("GO:0106003","GO:0044815","GO:1990429","GO:0002133","GO:0089713",
+#' goterm <- c("GO:0106003","GO:0032991","GO:1990429","GO:0002133","GO:0089713",
 #' "GO:1990666","GO:0036125")
 #'
 #'
@@ -132,7 +132,7 @@ getGOcategory <- function(goterm){
 
 #' Return length of depth for bp
 #'
-#' @param org organism
+#' @param Organism The name of the organism
 #'
 #' @keywords internal
 #' @return length of depth
@@ -173,7 +173,7 @@ maxLevelBP <- function(Organism){
 
 #' Return length of depth for mf
 #'
-#' @param org organism
+#' @param Organism The name of the organism
 #'
 #' @keywords internal
 #' @return length of depth
@@ -214,7 +214,7 @@ maxLevelMF <- function(Organism){
 
 #' Return length of depth for cc
 #'
-#' @param org organism
+#' @param Organism The name of the organism
 #'
 #' @keywords internal
 #' @return length of depth

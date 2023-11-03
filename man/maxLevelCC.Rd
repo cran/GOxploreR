@@ -7,7 +7,7 @@
 maxLevelCC(Organism)
 }
 \arguments{
-\item{org}{organism}
+\item{Organism}{The name of the organism}
 }
 \value{
 length of depth

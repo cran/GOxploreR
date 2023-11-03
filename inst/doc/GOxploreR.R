@@ -86,16 +86,16 @@ goterm <- c("GO:0009083","GO:0006631","GO:0006629","GO:0016835","GO:0046976","GO
 getGOcategory(goterm = goterm)
 
 
-## ---- fig.height= 3.4, fig.cap= "Degree distribution of the biological process GO-terms on level 4."----
+## ----fig.height= 3.4, fig.cap= "Degree distribution of the biological process GO-terms on level 4."----
 # Degree distribution of the GO-terms on a particular GO BP level
 degreeDistBP(level = 4)
 
-## ---- fig.height= 3.4, fig.cap= "Degree distribution of the molecular function GO-terms on level 2."----
+## ----fig.height= 3.4, fig.cap= "Degree distribution of the molecular function GO-terms on level 2."----
 # Degree distribution of the GO-terms on a particular GO MF level
 degreeDistMF(level = 2)
 
 
-## ---- fig.height= 3.4, fig.cap= "Degree distribution of the cellular component GO-terms on level 10."----
+## ----fig.height= 3.4, fig.cap= "Degree distribution of the cellular component GO-terms on level 10."----
 # Degree distribution of the GO-terms on a particular GO CC level
 degreeDistCC(level = 10)
 
@@ -127,7 +127,7 @@ head(GetDAG(organism = "Mouse", domain = "MF"))
 # Represent all the CC gene association GO-terms for Caenorhabditis elegans as an edgelist
 head(GetDAG(organism = "Caenorhabditis elegans", domain = "CC"))
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 # The GO-terms in each node category of the reduced Caenorhabditis elegans GO-DAG
 head(visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE))
 
@@ -140,11 +140,11 @@ visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L9 JN"
 # LN GO-terms on level 14 can be access as follows
 visRDAGMF(organism = "Caenorhabditis elegans", plot = FALSE)$"L11 LN"
 
-## ---- message=FALSE, fig.cap="\\label{fig:figs1}Visualization of a reduced GO-DAG for Caenorhabditis elegans."----
+## ----message=FALSE, fig.cap="\\label{fig:figs1}Visualization of a reduced GO-DAG for Caenorhabditis elegans."----
 # Represent the molecular function GO-DAG for organism Caenorhabditis elegans
 visRDAGMF(organism = "Caenorhabditis elegans", plot = TRUE)[["plot"]]
 
-## ---- size= 0.05, fig.cap="Visualization of a reduced sub-GO-DAG of BPs for  Human."----
+## ----size= 0.05, fig.cap="Visualization of a reduced sub-GO-DAG of BPs for  Human."----
 Terms <- c("GO:0022403","GO:0000278","GO:0006414","GO:0006415","GO:0006614",
            "GO:0045047","GO:0072599","GO:0006613","GO:0000279","GO:0000087",
            "GO:0070972","GO:0000184","GO:0000280","GO:0007067","GO:0006413",
@@ -159,7 +159,7 @@ Terms <- c("GO:0022403","GO:0000278","GO:0006414","GO:0006415","GO:0006614",
 # visualization the DAG node categories of the given biological process GO-terms
 visRsubDAGBP(goterm = Terms, organism = "Human")
 
-## ---- size= 0.05, fig.cap="\\label{fig:rank}The hierarchy levels for a list of GO-terms (y-axis) are shown in purple and the hierarchy levels for the maximal depth of paths in the GO-DAG passing through these GO-terms is shown in red."----
+## ----size= 0.05, fig.cap="\\label{fig:rank}The hierarchy levels for a list of GO-terms (y-axis) are shown in purple and the hierarchy levels for the maximal depth of paths in the GO-DAG passing through these GO-terms is shown in red."----
 Terms <- c("GO:0000278","GO:0006414","GO:0022403","GO:0006415","GO:0006614",
            "GO:0045047","GO:0072599","GO:0006613","GO:0000184","GO:0070972",
            "GO:0006413","GO:0000087","GO:0000280","GO:0000279","GO:0006612",
@@ -174,7 +174,7 @@ Terms <- c("GO:0000278","GO:0006414","GO:0022403","GO:0006415","GO:0006614",
 # Ordering of the GO-terms in the list
 distRankingGO(goterm = Terms, domain = "BP", plot = TRUE)
 
-## ---- size= 0.05, fig.cap="\\label{fig:rank2}"--------------------------------
+## ----size= 0.05, fig.cap="\\label{fig:rank2}"---------------------------------
 Terms <- c("GO:0000278","GO:0006414","GO:0022403","GO:0006415","GO:0006614",
            "GO:0045047","GO:0072599","GO:0006613","GO:0000184","GO:0070972",
            "GO:0006413","GO:0000087","GO:0000280","GO:0000279","GO:0006612",
