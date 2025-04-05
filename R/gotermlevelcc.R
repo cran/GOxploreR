@@ -43,7 +43,7 @@ GOTermCCOnLevel <- function(goterm){
     warning(paste(c("Check that the term", x[isna],"are cc GO-terms and not obsolete"), collapse = " "))
     x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term ", x[nonretired],"are cc GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[nonretired],"are cc GO-terms and not obsolete"), collapse = " "))
     x <- x[-nonretired]
   }
 

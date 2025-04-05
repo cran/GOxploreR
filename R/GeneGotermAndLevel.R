@@ -48,7 +48,7 @@ Gene2GOTermAndLevel_ON <- function(genes, organism, domain  = NULL){
   if(is.null(genes)){
     stop("The genes are not given with no default")
   }
-  if(!is.null(domain) && toupper(domain) != "BP" &&  toupper(domain) != "MF" && toupper(domain) != "CC"){
+  if(!is.null(domain) && toupper(domain) != "BP" && toupper(domain) != "MF" && toupper(domain) != "CC"){
     stop("The argument \"domain\" can only be \"BP\", \"MF\" or \"CC\".")
   }
 
@@ -74,7 +74,7 @@ Gene2GOTermAndLevel_ON <- function(genes, organism, domain  = NULL){
   }, error = function(e){
     Proc = FALSE
     stop("Make sure you have a good internet connection and that the genes belong to the organism in question")
-  },silent = TRUE)
+  },silent = FALSE)
 
   if(Proc){
     J <- goids
@@ -90,7 +90,7 @@ Gene2GOTermAndLevel_ON <- function(genes, organism, domain  = NULL){
       return(warning("make sure the genes belongs to the organism in question."))
     }
 
-    J <- cbind(J,gene_ontology)
+    J <- cbind(J, gene_ontology)
 
     a1 <- which(is.na(J[,3]))
     if(length(a1 )!= 0){

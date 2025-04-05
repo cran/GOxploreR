@@ -40,10 +40,10 @@ GOTermMFOnLevel <- function(goterm){
     x <- x[-c(isna,nonretired)]
   }
   else if(length(isna) > 0 ){
-    stop(paste(c("Check that the term ", x[isna],"are mf GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[isna],"are mf GO-terms and not obsolete"), collapse = " "))
     x <- x[-isna]
   }else if(length(nonretired) > 0){
-    stop(paste(c("Check that the term ", x[nonretired],"are mf GO-terms and not obsolete"), collapse = " "))
+    warning(paste(c("Check that the term ", x[nonretired],"are mf GO-terms and not obsolete"), collapse = " "))
     x <- x[-nonretired]
   }
 
@@ -264,7 +264,7 @@ Level2GOTermMF <- function(level, organism = NULL){
       print(paste("No such level exist for Drosophila melanogaster, the highest level is", length(MFDrosophila$df[,1]) - 1, sep = " "))
     })
 
-  }else if(toupper(Organism) == "ESCHERICHIA COLI" || toupper(Organism) == "E.COLI"){
+  } else if(toupper(Organism) == "ESCHERICHIA COLI" || toupper(Organism) == "E.COLI"){
     tryCatch({
       if(x <= length(MFEcoli$df[,1])){
         currentLevel <- MFEcoli$df[x,]

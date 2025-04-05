@@ -1,7 +1,7 @@
-e3eb196bb2ec205ce56e8565160e72d0 *DESCRIPTION
+b1e00d8b262a7f9557a4c77351bcbdd9 *DESCRIPTION
 9de255e2a37a223ad6af02c67e11de52 *NAMESPACE
 3f85158f95288bdc5fe123f996df852c *R/GO4org.R
-830ae9c20d6a65655f2205e15886af9d *R/GeneGotermAndLevel.R
+58bfab69789204c074b03c510f762ec7 *R/GeneGotermAndLevel.R
 5a0d9e4bf8953ba75316064d84852385 *R/GeneGotermAndLevelOL.R
 e7bb4830beb6495e5ce7c0892a95efd8 *R/JumpNode.R
 9f62d36eb6286e5b5c33611736c5eefd *R/RegularNode.R
@@ -18,8 +18,8 @@ eb12ce9230ba8d7c1b9bd5b9460b44fe *R/edgeListBp.R
 abcae2796302565ac7bfe7dc088df7ce *R/edgeListMf.R
 f0392e31bca0689db600ad7ae06213f9 *R/goedit.R
 d8f37c2aacaf2931228391a02de8bdce *R/gotermlevel.R
-c489bfba6c141d002afd43ca18463a53 *R/gotermlevelcc.R
-c21815fb4ca7c598d31f8b1050ee457d *R/gotermlevelmf.R
+8022e370f2e8cdf86fa5b630bef78de7 *R/gotermlevelcc.R
+a9544399fe0184c82915f84f94f015af *R/gotermlevelmf.R
 a439f90a26e75a5096e67c0063263beb *R/load.R
 aa3446c24c5aa610f4901f0d323980d9 *R/rankingFun.R
 739b22149084571cd91cd1f934112281 *R/supportedOrganism.R
@@ -28,7 +28,7 @@ fbc6c185d199abf8fe479f21296d0bdf *R/visdag.R
 68617ad692a844639910fe4dfcfc5ffb *build/vignette.rds
 3bfcc568c0841798762fd511931f055a *inst/doc/GOxploreR.R
 c136219c87b64a87bc30c98cb4e934ef *inst/doc/GOxploreR.Rmd
-4e9161ab54de91dee6eed775df5768a8 *inst/doc/GOxploreR.pdf
+5622e2057fb1fc8abdf2bfbb228c760c *inst/doc/GOxploreR.pdf
 522638bd8f64606b8a4beb60cf81d0c9 *man/GO2DecBP.Rd
 f14fa1e53547147bd4d12a4e7f6fd5e7 *man/GO2DecCC.Rd
 64222a37f5bbf9628c1ee4197f565f0e *man/GO2DecMF.Rd
